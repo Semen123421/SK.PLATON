@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>СК Платон | Дзюдо, Акробатика, Футбол в Новосибирске</title>
+    <meta name="description" content="Спортивный клуб Платон в Новосибирске. Дзюдо, акробатика, адаптивная гимнастика и футбол для детей от 3 лет. Больше чем спорт!">
+    
+    <!-- Шрифт -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container header__inner">
+            <a href="index.html" class="logo">
+                <!-- Замените на свой логотип -->
+                <img src="images/logo.png" alt="СК Платон" class="logo__img">
+                <span class="logo__text">СК ПЛАТОН</span>
+            </a>
+            
+            <!-- Мобильное меню (бургер) -->
+            <button class="burger" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="nav" id="nav">
+                <a href="index.html" class="nav__link active">Главная</a>
+                <a href="schedule.html" class="nav__link">Расписание</a>
+                <a href="coaches.html" class="nav__link">Тренеры</a>
+                <a href="#contacts" class="nav__link">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Главный экран (Hero) -->
+    <section class="hero">
+        <div class="container hero__content">
+            <div class="hero__badge">Новосибирск</div>
+            <h1 class="hero__title">БОЛЬШЕ ЧЕМ СПОРТ.<br><span class="accent">СИЛЬНЕЕ</span> В ХАРАКТЕРЕ.</h1>
+            <p class="hero__subtitle">Дзюдо | Акробатика | Адаптивная гимнастика | Футбол<br>Для детей от 3-х лет</p>
+            <div class="hero__actions">
+                <a href="#form" class="btn btn--primary">Записаться на пробное</a>
+                <a href="#about" class="btn btn--outline">Узнать больше</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Преимущества -->
+    <section class="features" id="about">
+        <div class="container">
+            <div class="features__grid">
+                <div class="feature">
+                    <div class="feature__icon">🥋</div>
+                    <h3>Профессиональные тренеры</h3>
+                    <p>Мастера спорта и опытные наставники с индивидуальным подходом к каждому ребенку.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature__icon">🛡️</div>
+                    <h3>Безопасность</h3>
+                    <p>Специализированный зал с профессиональными матами и безопасным покрытием.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature__icon">👨‍👩‍👧‍👦</div>
+                    <h3>От 3-х лет</h3>
+                    <p>Группы для малышей, детей, подростков и адаптивные программы для особенных детей.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Галерея зала -->
+    <section class="gallery">
+        <div class="container">
+            <h2 class="section-title">Наш <span class="accent">зал</span></h2>
+            <p class="section-subtitle">Где растут чемпионы</p>
+            <div class="gallery__grid">
+                <img src="images/hall1.jpg" alt="Зал для тренировок" loading="lazy">
+                <img src="images/hall2.jpg" alt="Маты и оборудование" loading="lazy">
+                <img src="images/hall3.jpg" alt="Тренировка детей" loading="lazy">
+                <img src="images/hall4.jpg" alt="Тренер с детьми" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Форма записи -->
+    <section id="form" class="form-section">
+        <div class="container form-section__inner">
+            <div class="form-text">
+                <h2>Запишитесь на <span class="accent">бесплатное</span> пробное занятие</h2>
+                <p>Оставьте заявку, и мы свяжемся с вами, чтобы подобрать удобное время и направление.</p>
+            </div>
+            <div class="form-card">
+                <form id="telegramForm">
+                    <div class="form-group">
+                        <label for="name">Имя и возраст ребенка</label>
+                        <input type="text" id="name" placeholder="Например: Иван, 7 лет" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Телефон родителя</label>
+                        <input type="tel" id="phone" placeholder="+7 (___) ___-__-__" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="direction">Направление</label>
+                        <select id="direction" required>
+                            <option value="" disabled selected>Выберите направление</option>
+                            <option value="Дзюдо">Дзюдо</option>
+                            <option value="Акробатика">Акробатика</option>
+                            <option value="Адаптивная гимнастика">Адаптивная гимнастика</option>
+                            <option value="Футбол">Футбол</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full">Отправить заявку</button>
+                </form>
+                <p id="status" class="status-msg"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер / Контакты -->
+    <footer id="contacts" class="footer">
+        <div class="container footer__inner">
+            <div class="footer__col">
+                <h3>СК ПЛАТОН</h3>
+                <p>Больше чем спорт. Сильнее в характере, спорте и жизни.</p>
+            </div>
+            <div class="footer__col">
+                <h4>Контакты</h4>
+                <p>📍 г. Новосибирск, ул. Спортивная, 1</p>
+                <p>📞 <a href="tel:+79991234567">+7 (999) 123-45-67</a></p>
+            </div>
+            <div class="footer__col">
+                <h4>Мы в соцсетях</h4>
+                <div class="socials">
+                    <a href="https://instagram.com/sk_platon_nsk" target="_blank" rel="noopener">Instagram</a>
+                    <a href="#" target="_blank" rel="noopener">ВКонтакте</a>
+                    <a href="#" target="_blank" rel="noopener">Telegram</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <p>&copy; 2024 СК Платон. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
