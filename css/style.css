@@ -184,4 +184,57 @@ body.dark-theme .nav__link:hover { background-color: #2A2A2A; }
     .gallery__grid { grid-template-columns: 1fr; }
     .gallery__grid img { height: 250px; }
     .form-card { padding: 25px; }
+    /* --- ТЕМНАЯ ТЕМА --- */
+body.dark-theme {
+    --color-white: #1A1A1A;      /* Фон сайта становится темным */
+    --color-dark: #F8F9FA;       /* Текст становится светлым */
+    --color-light: #2A2A2A;      /* Светлые блоки становятся темно-серыми */
+    --color-gray: #AAAAAA;       /* Серый текст чуть светлее */
+}
+
+/* Фиксы для элементов в темной теме */
+body.dark-theme .header {
+    background: #1A1A1A;
+    border-bottom: 1px solid #333;
+}
+
+body.dark-theme .logo__text,
+body.dark-theme .nav__link {
+    color: #F8F9FA;
+}
+
+body.dark-theme .theme-toggle {
+    color: #F8F9FA;
+}
+
+body.dark-theme .theme-toggle:hover {
+    background-color: #2A2A2A;
+}
+
+body.dark-theme .feature {
+    background: #222;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+body.dark-theme .form-section {
+    background-color: #111; 
+}
+
+body.dark-theme .form-card {
+    background: #1A1A1A;
+    border: 1px solid #333;
+}
+
+body.dark-theme .form-group input,
+body.dark-theme .form-group select {
+    background-color: #2A2A2A;
+    border-color: #444;
+    color: #fff;
+}
+
+body.dark-theme .form-group input:focus,
+body.dark-theme .form-group select:focus {
+    background-color: #333;
+    border-color: var(--color-red);
+}
 }
