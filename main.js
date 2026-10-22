@@ -1,35 +1,34 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // --- 3. Переключение темной темы ---
+    
+    // --- 1. Переключение темы ---
     const themeToggle = document.getElementById('theme-toggle');
     const iconMoon = document.getElementById('icon-moon');
     const iconSun = document.getElementById('icon-sun');
     
-    // Проверяем, сохранял ли пользователь тему ранее
-    const currentTheme = localStorage.getItem('theme');
-    if (currentTheme === 'dark') {
+    // Проверяем сохраненную тему
+    if (localStorage.getItem('theme') === 'dark') {
         document.body.classList.add('dark-theme');
-        iconMoon.style.display = 'none';
-        iconSun.style.display = 'block';
+        if (iconMoon) iconMoon.style.display = 'none';
+        if (iconSun) iconSun.style.display = 'block';
     }
 
     if (themeToggle) {
         themeToggle.addEventListener('click', () => {
             document.body.classList.toggle('dark-theme');
             
-            // Меняем иконки и сохраняем выбор в память браузера
             if (document.body.classList.contains('dark-theme')) {
-                iconMoon.style.display = 'none';
-                iconSun.style.display = 'block';
+                if (iconMoon) iconMoon.style.display = 'none';
+                if (iconSun) iconSun.style.display = 'block';
                 localStorage.setItem('theme', 'dark');
             } else {
-                iconMoon.style.display = 'block';
-                iconSun.style.display = 'none';
+                if (iconMoon) iconMoon.style.display = 'block';
+                if (iconSun) iconSun.style.display = 'none';
                 localStorage.setItem('theme', 'light');
             }
         });
     }
-    
-    // --- 1. Мобильное меню (Бургер) ---
+
+    // --- 2. Мобильное меню (Бургер) ---
     const burger = document.getElementById('burger');
     const nav = document.getElementById('nav');
 
@@ -39,7 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
             burger.classList.toggle('active');
         });
 
-        // Закрываем меню при клике на ссылку
         nav.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 nav.classList.remove('active');
@@ -48,23 +46,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- 2. Отправка формы в Telegram ---
+    // --- 3. Отправка формы в Telegram ---
     const form = document.getElementById('telegramForm');
     const status = document.getElementById('status');
 
-    // ЗАМЕНИТЕ НА СВОИ ДАННЫЕ (см. инструкцию ниже)
+    // ЗАМЕНИТЕ НА СВОИ ДАННЫЕ!
     const BOT_TOKEN = 'ВАШ_ТОКЕН_БОТА';
     const CHAT_ID = 'ВАШ_CHAT_ID';
 
     if (form) {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
-
             const name = document.getElementById('name').value.trim();
             const phone = document.getElementById('phone').value.trim();
             const direction = document.getElementById('direction').value;
 
-            // Валидация
             if (!name || !phone) {
                 status.textContent = 'Пожалуйста, заполните все поля.';
                 status.style.color = 'red';
@@ -75,14 +71,12 @@ document.addEventListener('DOMContentLoaded', () => {
             status.style.color = '#666';
 
             const text = `🔥 *Новая заявка с сайта!*\n\n👶 *Ребенок:* ${name}\n📞 *Телефон:* ${phone}\n🥋 *Направление:* ${direction}`;
-            
-            // Используем Markdown для красивого форматирования в ТГ
             const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${encodeURIComponent(text)}&parse_mode=Markdown`;
 
             fetch(url)
                 .then(response => {
                     if (response.ok) {
-                        status.textContent = '✅ Заявка отправлена! Мы скоро свяжемся с вами.';
+                        status.textContent = '✅ Заявка отправлена! Мы свяжемся с вами.';
                         status.style.color = 'green';
                         form.reset();
                     } else {
@@ -90,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 })
                 .catch(error => {
-                    status.textContent = '❌ Ошибка. Пожалуйста, позвоните нам: +7 (999) 123-45-67';
+                    status.textContent = '❌ Ошибка. Пожалуйста, позвоните нам.';
                     status.style.color = 'red';
                     console.error(error);
                 });

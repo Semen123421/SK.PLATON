@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>СК Платон | Дзюдо, Акробатика, Футбол в Новосибирске</title>
-    <meta name="description" content="Спортивный клуб Платон в Новосибирске. Дзюдо, акробатика, адаптивная гимнастика и футбол для детей от 3 лет. Больше чем спорт!">
+    <meta name="description" content="Спортивный клуб Платон в Новосибирске. Дзюдо, акробатика, адаптивная гимнастика и футбол для детей от 3 лет.">
     
-    <!-- Шрифт -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet">
@@ -15,18 +14,14 @@
 </head>
 <body>
 
-<!-- Шапка сайта -->
     <header class="header">
         <div class="container header__inner">
-            <!-- Логотип слева -->
             <a href="index.html" class="logo">
                 <img src="images/logo.png" alt="СК Платон" class="logo__img">
                 <span class="logo__text">СК ПЛАТОН</span>
             </a>
             
-            <!-- Правая часть (меню + кнопка темы + бургер) -->
             <div class="header__right">
-                <!-- Навигация (на ПК) -->
                 <nav class="nav" id="nav">
                     <a href="index.html" class="nav__link active">Главная</a>
                     <a href="schedule.html" class="nav__link">Расписание</a>
@@ -34,13 +29,11 @@
                     <a href="#contacts" class="nav__link">Контакты</a>
                 </nav>
 
-                <!-- Кнопка переключения темы -->
                 <button id="theme-toggle" class="theme-toggle" aria-label="Переключить тему">
                     <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
                     <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
                 </button>
 
-                <!-- Мобильное меню (бургер) -->
                 <button class="burger" id="burger">
                     <span></span>
                     <span></span>
@@ -49,24 +42,9 @@
             </div>
         </div>
     </header>
-
-    <!-- Главный экран (Hero) -->
-    <!-- Главный экран (Hero) -->
+    
     <section class="hero">
-        <!-- ВРЕМЕННЫЙ БЛОК СТИЛЕЙ (чтобы обойти кэш) -->
-        <style>
-            .hero h1, 
-            .hero p, 
-            .hero .hero__title span,
-            .hero .hero__badge {
-                color: #FFFFFF !important;
-            }
-        </style>
-
         <div class="container hero__content">
-            <div class="hero__badge">Новосибирск</div>
-            <h1 class="hero__title">БОЛЬШЕ ЧЕМ СПОРТ.<br><span class="accent">СИЛА</span> В ХАРАКТЕРЕ.</h1>
-            <!-- ... остальной код ... -->ro__content">
             <div class="hero__badge">Новосибирск</div>
             <h1 class="hero__title">БОЛЬШЕ ЧЕМ СПОРТ.<br><span class="accent">СИЛА</span> В ХАРАКТЕРЕ.</h1>
             <p class="hero__subtitle">Дзюдо | Акробатика | Адаптивная гимнастика | Футбол<br>Для детей от 3-х лет</p>
@@ -77,7 +55,6 @@
         </div>
     </section>
 
-    <!-- Преимущества -->
     <section class="features" id="about">
         <div class="container">
             <div class="features__grid">
@@ -100,21 +77,19 @@
         </div>
     </section>
 
-    <!-- Галерея зала -->
     <section class="gallery">
         <div class="container">
             <h2 class="section-title">Наш <span class="accent">зал</span></h2>
             <p class="section-subtitle">Где растут чемпионы</p>
             <div class="gallery__grid">
-                <img src="images/hall1.jpeg" alt="1" loading="lazy">
-                <img src="images/hall2.jpeg" alt="2" loading="lazy">
-                <img src="images/hall3.jpeg" alt="3" loading="lazy">
-                <img src="images/hall4.jpeg" alt="4" loading="lazy">
+                <img src="images/hall1.jpeg" alt="Зал" loading="lazy">
+                <img src="images/hall2.jpeg" alt="Тренировка" loading="lazy">
+                <img src="images/hall3.jpeg" alt="Дети" loading="lazy">
+                <img src="images/hall4.jpeg" alt="Тренер" loading="lazy">
             </div>
         </div>
     </section>
 
-    <!-- Форма записи -->
     <section id="form" class="form-section">
         <div class="container form-section__inner">
             <div class="form-text">
@@ -148,22 +123,21 @@
         </div>
     </section>
 
-    <!-- Футер / Контакты -->
     <footer id="contacts" class="footer">
         <div class="container footer__inner">
             <div class="footer__col">
                 <h3>СК ПЛАТОН</h3>
-                <p>Больше чем спорт. Силa в характере, спорте и жизни.</p>
+                <p>Больше чем спорт. Сила в характере, спорте и жизни.</p>
             </div>
             <div class="footer__col">
                 <h4>Контакты</h4>
                 <p>📍 г. Новосибирск, ул. Заречная 13</p>
-                <p>📞 <a href="tel:+79991234567">+7 (905) 933-31-41</a></p>
+                <p>📞 <a href="tel:+79059333141">+7 (905) 933-31-41</a></p>
             </div>
             <div class="footer__col">
                 <h4>Мы в соцсетях</h4>
                 <div class="socials">
-                    <a href="https://www.instagram.com/sk_platon_nsk?mdxt=Z3VxNjd1eTZxaHg=" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.instagram.com/sk_platon_nsk" target="_blank" rel="noopener">Instagram</a>
                 </div>
             </div>
         </div>
@@ -174,59 +148,6 @@
         </div>
     </footer>
 
-<div class="footer__bottom">
-            <div class="container">
-                <p>&copy; 2026 СК Платон. Все права защищены.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- СКРИПТ ТЕМЫ И МЕНЮ (вставлен сюда) -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            
-            // 1. Логика темы
-            const themeBtn = document.getElementById('theme-toggle');
-            const moon = document.getElementById('icon-moon');
-            const sun = document.getElementById('icon-sun');
-
-            if (themeBtn) {
-                themeBtn.onclick = function() {
-                    document.body.classList.toggle('dark-theme');
-                    
-                    if (document.body.classList.contains('dark-theme')) {
-                        if(moon) moon.style.display = 'none';
-                        if(sun) sun.style.display = 'block';
-                        localStorage.setItem('theme', 'dark');
-                    } else {
-                        if(moon) moon.style.display = 'block';
-                        if(sun) sun.style.display = 'none';
-                        localStorage.setItem('theme', 'light');
-                    }
-                };
-            }
-
-            // Применяем сохраненную тему при загрузке
-            if (localStorage.getItem('theme') === 'dark') {
-                document.body.classList.add('dark-theme');
-                if(moon) moon.style.display = 'none';
-                if(sun) sun.style.display = 'block';
-            }
-
-            // 2. Логика бургера
-            const burger = document.getElementById('burger');
-            const nav = document.getElementById('nav');
-            if (burger && nav) {
-                burger.onclick = function() {
-                    nav.classList.toggle('active');
-                    burger.classList.toggle('active');
-                };
-            }
-        });
-    </script>
-    <!-- КОНЕЦ СКРИПТА -->
-
-</body>
-</html>
+    <script src="js/main.js"></script>
 </body>
 </html>
