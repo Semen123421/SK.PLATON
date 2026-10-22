@@ -492,6 +492,11 @@ body {
 
     .hero__title {
         font-size: 36px;
+        .hero__title, 
+.hero__subtitle,
+.hero__badge {
+    color: #FFFFFF !important; /* Принудительно белый цвет */
+}
     }
 
     .hero {
@@ -581,4 +586,20 @@ body.dark-theme .form-group select:focus {
     .header__right {
         gap: 10px;
     }
+    /* --- ПРИНУДИТЕЛЬНЫЙ БЕЛЫЙ ТЕКСТ НА ГЛАВНОМ ЭКРАНЕ (В ЛЮБОЙ ТЕМЕ) --- */
+.hero .hero__title,
+.hero .hero__subtitle,
+.hero .hero__badge,
+.hero .hero__title span {
+    color: #FFFFFF !important; 
+    /* --- ИКОНКА СОЛНЦА В ТЕМНОЙ ТЕМЕ --- */
+    
+body.dark-theme #icon-sun {
+    stroke: #FFFFFF !important; /* Делаем обводку иконки белой */
+}
+
+body.dark-theme .theme-toggle {
+    color: #FFFFFF !important; /* Убеждаемся, что сама кнопка белая */
+}
+}
 }
