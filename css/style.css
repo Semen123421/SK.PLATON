@@ -82,10 +82,123 @@ body {
 .burger span { display: block; width: 25px; height: 3px; background-color: var(--color-dark); transition: var(--transition); }
 
 /* --- HERO --- */
+/* --- ГЛАВНЫЙ ЭКРАН (HERO) --- */
 .hero {
-    background: linear-gradient(135deg, rgba(26,26,26,0.9) 0%, rgba(227,6,19,0.4) 100%), url('../images/hero-bg.jpg') no-repeat center/cover;
-    padding: 120px 0;
+    /* Фон: затемняем картинку, чтобы белый текст читался идеально */
+    background: linear-gradient(135deg, rgba(26,26,26,0.85) 0%, rgba(227,6,19,0.6) 100%), url('images/hero-bg.jpg') no-repeat center/cover;
+    padding: 140px 0 120px;
     position: relative;
+    overflow: hidden;
+}
+
+.hero__content {
+    max-width: 800px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Красивая плашка "Новосибирск" */
+.hero__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px); /* Эффект стекла */
+    -webkit-backdrop-filter: blur(10px);
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Зеленая точка в плашке */
+.pulse-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #25D366;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+/* Заголовок */
+.hero__title {
+    font-size: 64px;
+    font-weight: 900;
+    line-height: 1.05;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    color: #FFFFFF !important;
+    /* Красивая тень, чтобы текст выделялся на фоне */
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    letter-spacing: -1px;
+}
+
+.hero__subtitle {
+    font-size: 20px;
+    margin-bottom: 45px;
+    color: rgba(255, 255, 255, 0.85) !important;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.hero__actions {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* --- КНОПКИ --- */
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 36px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    letter-spacing: 0.5px;
+}
+
+.btn--primary {
+    background-color: var(--color-red);
+    color: #fff;
+    box-shadow: 0 10px 25px rgba(227, 6, 19, 0.4);
+}
+
+.btn--primary:hover {
+    background-color: var(--color-red-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(227, 6, 19, 0.6);
+}
+
+/* Стеклянная кнопка (вместо обычной прозрачной) */
+.btn--glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn--glass:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
 }
 /* Принудительно белый текст для Hero, чтобы не ломался в темной теме */
 .hero h1, .hero p, .hero .accent, .hero .hero__badge {
@@ -167,23 +280,33 @@ body.dark-theme .nav__link:hover { background-color: #2A2A2A; }
     .form-section__inner, .footer__inner { grid-template-columns: 1fr; text-align: center; }
 }
 @media (max-width: 768px) {
-    .burger { display: flex; }
-    .nav {
-        position: absolute; top: 90px; left: 0; width: 100%; background: var(--color-white);
-        flex-direction: column; gap: 0; padding: 0; max-height: 0; overflow: hidden;
-        transition: max-height 0.3s ease; box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    /* ... ваш старый код ... */
+    
+    .hero {
+        padding: 100px 0 80px; /* Уменьшаем отступы */
     }
-    .nav.active { max-height: 300px; }
-    .nav__link { padding: 15px 20px; border-bottom: 1px solid #eee; }
-    .nav__link::after { display: none; }
-    .hero__title { font-size: 36px; }
-    .hero { padding: 80px 0; }
-    .hero__actions { flex-direction: column; }
-    .btn { width: 100%; }
-    .section-title { font-size: 30px; }
-    .gallery__grid { grid-template-columns: 1fr; }
-    .gallery__grid img { height: 250px; }
-    .form-card { padding: 25px; }
+    
+    .hero__title {
+        font-size: 40px; /* Уменьшаем шрифт для телефона */
+        line-height: 1.1;
+        letter-spacing: -0.5px;
+    }
+    
+    .hero__subtitle {
+        font-size: 16px; /* Текст поменьше */
+        margin-bottom: 30px;
+    }
+    
+    .hero__actions {
+        flex-direction: column; /* Кнопки встанут друг под другом */
+        width: 100%;
+    }
+    
+    .btn {
+        width: 100%; /* Кнопки на всю ширину экрана */
+        padding: 16px 20px;
+    }
+}
     /* --- ТЕМНАЯ ТЕМА --- */
 body.dark-theme {
     --color-white: #1A1A1A;      /* Фон сайта становится темным */
@@ -236,5 +359,4 @@ body.dark-theme .form-group input:focus,
 body.dark-theme .form-group select:focus {
     background-color: #333;
     border-color: var(--color-red);
-}
 }
