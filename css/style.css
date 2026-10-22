@@ -160,25 +160,132 @@ body.dark-theme .burger span { background-color: #fff; }
     .gallery__grid { grid-template-columns: 1fr; }
     .gallery__grid img { height: 250px; }
     .form-card { padding: 25px; }
-    /* --- ТРЕНЕРЫ --- */
-.coaches { padding: 80px 0; background-color: var(--color-light); }
-.coaches__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; }
-.coach-card { background: var(--color-white); border-radius: var(--border-radius); overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: var(--transition); text-align: center; padding-bottom: 25px; }
-.coach-card:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
-.coach-card__img-wrapper { width: 100%; height: 250px; background-color: #ddd; overflow: hidden; margin-bottom: 20px; }
-.coach-card__img-wrapper img { width: 100%; height: 100%; object-fit: cover; }
-.coach-card__placeholder { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 20px; color: #888; font-weight: 600; background: #eee; }
-.coach-card h3 { font-size: 20px; margin-bottom: 5px; color: var(--color-dark); }
-.coach-card__role { font-size: 14px; color: var(--color-red); font-weight: 600; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
-.coach-card__desc { font-size: 15px; color: var(--color-gray); padding: 0 20px; }
+   /* --- ТРЕНЕРЫ (АККОРДЕОН) --- */
+.coaches { padding: 80px 0; background-color: var(--color-light); transition: background-color 0.3s; }
+.coaches__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; align-items: start; }
 
-/* Темная тема для тренеров */
-body.dark-theme .coaches { background-color: #111; }
-body.dark-theme .coach-card { background: #222; }
-body.dark-theme .coach-card__placeholder { background: #333; color: #aaa; }
-body.dark-theme .coach-card h3 { color: #fff; }
+/* Сама карточка */
+.coach-card {
+    background: var(--color-white);
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: var(--transition);
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+.coach-card:hover {
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    border-color: rgba(227, 6, 19, 0.2);
+}
+
+/* Шапка карточки (то, что видно всегда) */
+.coach-card__header {
+    display: flex;
+    flex-direction: column;
+    list-style: none; /* Убираем стандартный маркер списка */
+    outline: none;
+}
+.coach-card__header::-webkit-details-marker {
+    display: none; /* Убираем маркер в Safari/Chrome */
+}
+
+/* Картинка тренера */
+.coach-card__img-wrapper {
+    width: 100%;
+    height: 280px;
+    background-color: #ddd;
+    position: relative;
+}
+.coach-card__img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+.coach-card__placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: #888;
+    font-weight: 600;
+    background: #eee;
+}
+
+/* Блок с именем и кнопкой */
+.coach-card__title-block {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.coach-card__title-block h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: var(--color-dark);
+    transition: color 0.3s;
+}
+.coach-card__role {
+    font-size: 13px;
+    color: var(--color-red);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Иконка "плюс" */
+.coach-card__icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background: var(--color-light);
+    color: var(--color-red);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 400;
+    transition: var(--transition);
+}
+
+/* Логика раскрытия */
+.coach-card[open] {
+    border-color: var(--color-red);
+}
+.coach-card[open] .coach-card__icon {
+    transform: translateY(-50%) rotate(45deg); /* Плюс превращается в крестик */
+    background: var(--color-red);
+    color: #fff;
+}
+
+/* Скрываемый контент */
+.coach-card__content {
+    padding: 0 20px 20px 20px;
+    color: var(--color-gray);
+    font-size: 15px;
+    line-height: 1.6;
+    animation: fadeIn 0.3s ease-in-out;
+}
+.coach-card__content p { margin-bottom: 10px; }
+.coach-card__content strong { color: var(--color-dark); }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 
 @media (max-width: 768px) {
     .coach-card__img-wrapper { height: 200px; }
+}
+/* Увеличиваем отступ у галереи, так как удалили форму */
+.gallery {
+    padding-bottom: 100px; 
 }
 }

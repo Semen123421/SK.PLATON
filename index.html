@@ -51,7 +51,7 @@
             <h1 class="hero__title">БОЛЬШЕ ЧЕМ СПОРТ.<br><span class="accent">СИЛА</span> В ХАРАКТЕРЕ.</h1>
             <p class="hero__subtitle">Дзюдо • Акробатика • Адаптивная гимнастика • Футбол<br>Для детей от 3-х лет</p>
             <div class="hero__actions">
-                <a href="#form" class="btn btn--primary">Записаться на пробное</a>
+                <a href="tel:+79059333141" class="btn btn--primary">Записаться по телефону</a>
                 <a href="#about" class="btn btn--glass">Узнать больше</a>
             </div>
         </div>
@@ -80,40 +80,71 @@
         </div>
     </section>
 
-    <!-- ТРЕНЕРЫ -->
+<!-- ТРЕНЕРЫ -->
     <section class="coaches" id="coaches">
         <div class="container">
             <h2 class="section-title">Наши <span class="accent">тренеры</span></h2>
-            <p class="section-subtitle">Профессионалы своего дела</p>
+            <p class="section-subtitle">Нажмите на карточку, чтобы узнать подробнее</p>
             
             <div class="coaches__grid">
+                
                 <!-- Карточка 1 -->
-                <div class="coach-card">
-                    <div class="coach-card__img-wrapper">
-                        <div class="coach-card__placeholder">Фото</div>
+                <details class="coach-card">
+                    <summary class="coach-card__header">
+                        <div class="coach-card__img-wrapper">
+                            <img src="images/coach1.jpg" alt="Иван Иванов" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="coach-card__placeholder" style="display:none;">Фото</div>
+                        </div>
+                        <div class="coach-card__title-block">
+                            <h3>Иван Иванов</h3>
+                            <p class="coach-card__role">Тренер по Дзюдо</p>
+                            <span class="coach-card__icon">+</span>
+                        </div>
+                    </summary>
+                    <div class="coach-card__content">
+                        <p>Мастер спорта международного класса. Стаж работы с детьми более 10 лет. Воспитал не одного победителя областных соревнований.</p>
+                        <p><strong>Направление:</strong> Дзюдо (от 3-х лет)</p>
                     </div>
-                    <h3>Иван Иванов</h3>
-                    <p class="coach-card__role">Тренер по Дзюдо</p>
-                    <p class="coach-card__desc">Мастер спорта. Стаж работы с детьми более 10 лет.</p>
-                </div>
+                </details>
+
                 <!-- Карточка 2 -->
-                <div class="coach-card">
-                    <div class="coach-card__img-wrapper">
-                        <div class="coach-card__placeholder">Фото</div>
+                <details class="coach-card">
+                    <summary class="coach-card__header">
+                        <div class="coach-card__img-wrapper">
+                            <img src="images/coach2.jpg" alt="Петр Петров" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="coach-card__placeholder" style="display:none;">Фото</div>
+                        </div>
+                        <div class="coach-card__title-block">
+                            <h3>Петр Петров</h3>
+                            <p class="coach-card__role">Тренер по Акробатике</p>
+                            <span class="coach-card__icon">+</span>
+                        </div>
+                    </summary>
+                    <div class="coach-card__content">
+                        <p>КМС по спортивной акробатике. Индивидуальный подход к каждому ребенку. Помогает преодолеть страх и развить гибкость.</p>
+                        <p><strong>Направление:</strong> Акробатика (от 4-х лет)</p>
                     </div>
-                    <h3>Петр Петров</h3>
-                    <p class="coach-card__role">Тренер по Акробатике</p>
-                    <p class="coach-card__desc">КМС. Индивидуальный подход к каждому ребенку.</p>
-                </div>
+                </details>
+
                 <!-- Карточка 3 -->
-                <div class="coach-card">
-                    <div class="coach-card__img-wrapper">
-                        <div class="coach-card__placeholder">Фото</div>
+                <details class="coach-card">
+                    <summary class="coach-card__header">
+                        <div class="coach-card__img-wrapper">
+                            <img src="images/coach3.jpg" alt="Анна Смирнова" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="coach-card__placeholder" style="display:none;">Фото</div>
+                        </div>
+                        <div class="coach-card__title-block">
+                            <h3>Анна Смирнова</h3>
+                            <p class="coach-card__role">Адаптивная гимнастика</p>
+                            <span class="coach-card__icon">+</span>
+                        </div>
+                    </summary>
+                    <div class="coach-card__content">
+                        <p>Специалист по работе с особенными детьми. Имеет профильное педагогическое образование и огромное сердце.</p>
+                        <p><strong>Направление:</strong> Адаптивная гимнастика</p>
                     </div>
-                    <h3>Анна Смирнова</h3>
-                    <p class="coach-card__role">Адаптивная гимнастика</p>
-                    <p class="coach-card__desc">Специалист по работе с особенными детьми.</p>
-                </div>
+                </details>
+
             </div>
         </div>
     </section>
@@ -132,39 +163,7 @@
         </div>
     </section>
 
-    <!-- ФОРМА ЗАПИСИ -->
-    <section id="form" class="form-section">
-        <div class="container form-section__inner">
-            <div class="form-text">
-                <h2>Запишитесь на <span class="accent">бесплатное</span> пробное занятие</h2>
-                <p>Оставьте заявку, и мы свяжемся с вами, чтобы подобрать удобное время и направление.</p>
-            </div>
-            <div class="form-card">
-                <form id="telegramForm">
-                    <div class="form-group">
-                        <label for="name">Имя и возраст ребенка</label>
-                        <input type="text" id="name" placeholder="Например: Иван, 7 лет" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Телефон родителя</label>
-                        <input type="tel" id="phone" placeholder="+7 (___) ___-__-__" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="direction">Направление</label>
-                        <select id="direction" required>
-                            <option value="" disabled selected>Выберите направление</option>
-                            <option value="Дзюдо">Дзюдо</option>
-                            <option value="Акробатика">Акробатика</option>
-                            <option value="Адаптивная гимнастика">Адаптивная гимнастика</option>
-                            <option value="Футбол">Футбол</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="btn btn--primary btn--full">Отправить заявку</button>
-                </form>
-                <p id="status" class="status-msg"></p>
-            </div>
-        </div>
-    </section>
+
 
     <!-- ФУТЕР -->
     <footer id="contacts" class="footer">
