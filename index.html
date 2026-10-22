@@ -17,20 +17,19 @@
     <!-- ШАПКА -->
     <header class="header">
         <div class="container header__inner">
-            <a href="index.html" class="logo">
+            <a href="#" class="logo">
                 <img src="images/logo.png" alt="СК Платон" class="logo__img">
                 <span class="logo__text">СК ПЛАТОН</span>
             </a>
             
             <div class="header__right">
                 <nav class="nav" id="nav">
-                    <a href="index.html" class="nav__link active">Главная</a>
-                    <a href="schedule.html" class="nav__link">Расписание</a>
-                    <a href="coaches.html" class="nav__link">Тренеры</a>
-                    <a href="#contacts" class="nav__link">Контакты</a>
+                    <a href="#about" class="nav__link">О нас</a>
+                    <a href="#coaches" class="nav__link">Тренеры</a>
+                    <a href="#gallery" class="nav__link">Зал</a>
+                    <a href="#form" class="nav__link">Контакты</a>
                 </nav>
 
-                <!-- Кнопка темы -->
                 <button id="theme-toggle" class="theme-toggle" aria-label="Переключить тему">
                     <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
                     <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
@@ -81,8 +80,46 @@
         </div>
     </section>
 
+    <!-- ТРЕНЕРЫ -->
+    <section class="coaches" id="coaches">
+        <div class="container">
+            <h2 class="section-title">Наши <span class="accent">тренеры</span></h2>
+            <p class="section-subtitle">Профессионалы своего дела</p>
+            
+            <div class="coaches__grid">
+                <!-- Карточка 1 -->
+                <div class="coach-card">
+                    <div class="coach-card__img-wrapper">
+                        <div class="coach-card__placeholder">Фото</div>
+                    </div>
+                    <h3>Иван Иванов</h3>
+                    <p class="coach-card__role">Тренер по Дзюдо</p>
+                    <p class="coach-card__desc">Мастер спорта. Стаж работы с детьми более 10 лет.</p>
+                </div>
+                <!-- Карточка 2 -->
+                <div class="coach-card">
+                    <div class="coach-card__img-wrapper">
+                        <div class="coach-card__placeholder">Фото</div>
+                    </div>
+                    <h3>Петр Петров</h3>
+                    <p class="coach-card__role">Тренер по Акробатике</p>
+                    <p class="coach-card__desc">КМС. Индивидуальный подход к каждому ребенку.</p>
+                </div>
+                <!-- Карточка 3 -->
+                <div class="coach-card">
+                    <div class="coach-card__img-wrapper">
+                        <div class="coach-card__placeholder">Фото</div>
+                    </div>
+                    <h3>Анна Смирнова</h3>
+                    <p class="coach-card__role">Адаптивная гимнастика</p>
+                    <p class="coach-card__desc">Специалист по работе с особенными детьми.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ГАЛЕРЕЯ -->
-    <section class="gallery">
+    <section class="gallery" id="gallery">
         <div class="container">
             <h2 class="section-title">Наш <span class="accent">зал</span></h2>
             <p class="section-subtitle">Где растут чемпионы</p>
@@ -95,7 +132,7 @@
         </div>
     </section>
 
-    <!-- ФОРМА -->
+    <!-- ФОРМА ЗАПИСИ -->
     <section id="form" class="form-section">
         <div class="container form-section__inner">
             <div class="form-text">
@@ -150,7 +187,7 @@
         </div>
         <div class="footer__bottom">
             <div class="container">
-                <p>&copy; 2024 СК Платон. Все права защищены.</p>
+                <p>&copy; 2026 СК Платон. Все права защищены.</p>
             </div>
         </div>
     </footer>
