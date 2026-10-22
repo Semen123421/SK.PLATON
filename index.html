@@ -51,8 +51,22 @@
     </header>
 
     <!-- Главный экран (Hero) -->
+    <!-- Главный экран (Hero) -->
     <section class="hero">
+        <!-- ВРЕМЕННЫЙ БЛОК СТИЛЕЙ (чтобы обойти кэш) -->
+        <style>
+            .hero h1, 
+            .hero p, 
+            .hero .hero__title span,
+            .hero .hero__badge {
+                color: #FFFFFF !important;
+            }
+        </style>
+
         <div class="container hero__content">
+            <div class="hero__badge">Новосибирск</div>
+            <h1 class="hero__title">БОЛЬШЕ ЧЕМ СПОРТ.<br><span class="accent">СИЛА</span> В ХАРАКТЕРЕ.</h1>
+            <!-- ... остальной код ... -->ro__content">
             <div class="hero__badge">Новосибирск</div>
             <h1 class="hero__title">БОЛЬШЕ ЧЕМ СПОРТ.<br><span class="accent">СИЛА</span> В ХАРАКТЕРЕ.</h1>
             <p class="hero__subtitle">Дзюдо | Акробатика | Адаптивная гимнастика | Футбол<br>Для детей от 3-х лет</p>
