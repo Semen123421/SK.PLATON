@@ -1,11 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    // --- 1. Переключение темы ---
+    // --- 1. ТЕМНАЯ ТЕМА ---
     const themeToggle = document.getElementById('theme-toggle');
     const iconMoon = document.getElementById('icon-moon');
     const iconSun = document.getElementById('icon-sun');
     
-    // Проверяем сохраненную тему
     if (localStorage.getItem('theme') === 'dark') {
         document.body.classList.add('dark-theme');
         if (iconMoon) iconMoon.style.display = 'none';
@@ -15,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (themeToggle) {
         themeToggle.addEventListener('click', () => {
             document.body.classList.toggle('dark-theme');
-            
             if (document.body.classList.contains('dark-theme')) {
                 if (iconMoon) iconMoon.style.display = 'none';
                 if (iconSun) iconSun.style.display = 'block';
@@ -28,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- 2. Мобильное меню (Бургер) ---
+    // --- 2. МОБИЛЬНОЕ МЕНЮ ---
     const burger = document.getElementById('burger');
     const nav = document.getElementById('nav');
 
@@ -37,7 +35,6 @@ document.addEventListener('DOMContentLoaded', () => {
             nav.classList.toggle('active');
             burger.classList.toggle('active');
         });
-
         nav.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 nav.classList.remove('active');
@@ -46,11 +43,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- 3. Отправка формы в Telegram ---
+    // --- 3. ФОРМА В TELEGRAM ---
     const form = document.getElementById('telegramForm');
     const status = document.getElementById('status');
 
-    // ЗАМЕНИТЕ НА СВОИ ДАННЫЕ!
+    // ВАШИ ДАННЫЕ (ОБЯЗАТЕЛЬНО ВПИШИТЕ СВОИ!)
     const BOT_TOKEN = 'ВАШ_ТОКЕН_БОТА';
     const CHAT_ID = 'ВАШ_CHAT_ID';
 
@@ -70,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
             status.textContent = 'Отправка...';
             status.style.color = '#666';
 
-            const text = `🔥 *Новая заявка с сайта!*\n\n👶 *Ребенок:* ${name}\n📞 *Телефон:* ${phone}\n🥋 *Направление:* ${direction}`;
+            const text = `🔥 *Новая заявка!*\n\n👶 *Ребенок:* ${name}\n📞 *Телефон:* ${phone}\n🥋 *Направление:* ${direction}`;
             const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${encodeURIComponent(text)}&parse_mode=Markdown`;
 
             fetch(url)
@@ -79,14 +76,11 @@ document.addEventListener('DOMContentLoaded', () => {
                         status.textContent = '✅ Заявка отправлена! Мы свяжемся с вами.';
                         status.style.color = 'green';
                         form.reset();
-                    } else {
-                        throw new Error('Ошибка Telegram');
-                    }
+                    } else { throw new Error(); }
                 })
-                .catch(error => {
+                .catch(() => {
                     status.textContent = '❌ Ошибка. Пожалуйста, позвоните нам.';
                     status.style.color = 'red';
-                    console.error(error);
                 });
         });
     }
