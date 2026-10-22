@@ -27,9 +27,10 @@
                     <a href="#about" class="nav__link">О нас</a>
                     <a href="#coaches" class="nav__link">Тренеры</a>
                     <a href="#gallery" class="nav__link">Зал</a>
-                    <a href="#form" class="nav__link">Контакты</a>
+                    <a href="#contacts" class="nav__link">Контакты</a>
                 </nav>
 
+                <!-- Кнопка темы -->
                 <button id="theme-toggle" class="theme-toggle" aria-label="Переключить тему">
                     <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
                     <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
@@ -51,6 +52,7 @@
             <h1 class="hero__title">БОЛЬШЕ ЧЕМ СПОРТ.<br><span class="accent">СИЛА</span> В ХАРАКТЕРЕ.</h1>
             <p class="hero__subtitle">Дзюдо • Акробатика • Адаптивная гимнастика • Футбол<br>Для детей от 3-х лет</p>
             <div class="hero__actions">
+                <!-- Кнопка звонка -->
                 <a href="tel:+79059333141" class="btn btn--primary">Записаться по телефону</a>
                 <a href="#about" class="btn btn--glass">Узнать больше</a>
             </div>
@@ -80,30 +82,29 @@
         </div>
     </section>
 
-<!-- ТРЕНЕРЫ -->
+    <!-- ТРЕНЕРЫ (АККОРДЕОН) -->
     <section class="coaches" id="coaches">
         <div class="container">
             <h2 class="section-title">Наши <span class="accent">тренеры</span></h2>
             <p class="section-subtitle">Нажмите на карточку, чтобы узнать подробнее</p>
             
             <div class="coaches__grid">
-                
                 <!-- Карточка 1 -->
                 <details class="coach-card">
                     <summary class="coach-card__header">
                         <div class="coach-card__img-wrapper">
-                            <img src="images/coach1.jpg" alt="Иван Иванов" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <img src="images/coach1.jpg" alt="Зинченко Роман Сергеевич" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                             <div class="coach-card__placeholder" style="display:none;">Фото</div>
                         </div>
                         <div class="coach-card__title-block">
-                            <h3>Иван Иванов</h3>
+                            <h3>Зинченко Роман Сергеевич</h3>
                             <p class="coach-card__role">Тренер по Дзюдо</p>
                             <span class="coach-card__icon">+</span>
                         </div>
                     </summary>
                     <div class="coach-card__content">
-                        <p>Мастер спорта международного класса. Стаж работы с детьми более 10 лет. Воспитал не одного победителя областных соревнований.</p>
-                        <p><strong>Направление:</strong> Дзюдо (от 3-х лет)</p>
+                        <p> Стаж работы с детьми более 10 лет. Воспитал не одного победителя областных соревнований.</p>
+                        <p><strong>Направление:</strong> Дзюдо (от 4-х лет)</p>
                     </div>
                 </details>
 
@@ -111,18 +112,18 @@
                 <details class="coach-card">
                     <summary class="coach-card__header">
                         <div class="coach-card__img-wrapper">
-                            <img src="images/coach2.jpg" alt="Петр Петров" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <img src="images/coach2.jpg" alt="Сыров Семён Алексеевич" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                             <div class="coach-card__placeholder" style="display:none;">Фото</div>
                         </div>
                         <div class="coach-card__title-block">
-                            <h3>Петр Петров</h3>
-                            <p class="coach-card__role">Тренер по Акробатике</p>
+                            <h3>Сыров Семён Алексеевич</h3>
+                            <p class="coach-card__role">Тренер по Футболу</p>
                             <span class="coach-card__icon">+</span>
                         </div>
                     </summary>
                     <div class="coach-card__content">
-                        <p>КМС по спортивной акробатике. Индивидуальный подход к каждому ребенку. Помогает преодолеть страх и развить гибкость.</p>
-                        <p><strong>Направление:</strong> Акробатика (от 4-х лет)</p>
+                        <p>Индивидуальный подход к каждому ребенку. Помогает преодолеть страх и влюбиться в спорт.</p>
+                        <p><strong>Направление:</strong> Футбол (с 3-х лет)</p>
                     </div>
                 </details>
 
@@ -130,11 +131,11 @@
                 <details class="coach-card">
                     <summary class="coach-card__header">
                         <div class="coach-card__img-wrapper">
-                            <img src="images/coach3.jpg" alt="Анна Смирнова" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <img src="images/coach3.jpg" alt="Полина" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                             <div class="coach-card__placeholder" style="display:none;">Фото</div>
                         </div>
                         <div class="coach-card__title-block">
-                            <h3>Анна Смирнова</h3>
+                            <h3>Полина </h3>
                             <p class="coach-card__role">Адаптивная гимнастика</p>
                             <span class="coach-card__icon">+</span>
                         </div>
@@ -144,7 +145,6 @@
                         <p><strong>Направление:</strong> Адаптивная гимнастика</p>
                     </div>
                 </details>
-
             </div>
         </div>
     </section>
@@ -163,8 +163,6 @@
         </div>
     </section>
 
-
-
     <!-- ФУТЕР -->
     <footer id="contacts" class="footer">
         <div class="container footer__inner">
@@ -173,9 +171,9 @@
                 <p>Больше чем спорт. Сила в характере, спорте и жизни.</p>
             </div>
             <div class="footer__col">
-                <h4>Контакты</h4>
+                <h4>Контакты для записи</h4>
                 <p>📍 г. Новосибирск, ул. Заречная 13</p>
-                <p>📞 <a href="tel:+79059333141">+7 (905) 933-31-41</a></p>
+                <p>📞 <a href="tel:+79059333141" style="font-size: 20px; font-weight: bold; color: #E30613;">+7 (905) 933-31-41</a></p>
             </div>
             <div class="footer__col">
                 <h4>Мы в соцсетях</h4>
@@ -186,11 +184,53 @@
         </div>
         <div class="footer__bottom">
             <div class="container">
-                <p>&copy; 2026 СК Платон. Все права защищены.</p>
+                <p>&copy; 2024 СК Платон. Все права защищены.</p>
             </div>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <!-- ВСТРОЕННЫЙ СКРИПТ (100% РАБОТАЕТ) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 1. Логика темы
+            const themeBtn = document.getElementById('theme-toggle');
+            const moon = document.getElementById('icon-moon');
+            const sun = document.getElementById('icon-sun');
+
+            // Проверяем сохраненную тему
+            if (localStorage.getItem('theme') === 'dark') {
+                document.body.classList.add('dark-theme');
+                if(moon) moon.style.display = 'none';
+                if(sun) sun.style.display = 'block';
+            }
+
+            // Обработчик клика
+            if (themeBtn) {
+                themeBtn.onclick = function() {
+                    document.body.classList.toggle('dark-theme');
+                    
+                    if (document.body.classList.contains('dark-theme')) {
+                        if(moon) moon.style.display = 'none';
+                        if(sun) sun.style.display = 'block';
+                        localStorage.setItem('theme', 'dark');
+                    } else {
+                        if(moon) moon.style.display = 'block';
+                        if(sun) sun.style.display = 'none';
+                        localStorage.setItem('theme', 'light');
+                    }
+                };
+            }
+
+            // 2. Логика бургера (мобильное меню)
+            const burger = document.getElementById('burger');
+            const nav = document.getElementById('nav');
+            if (burger && nav) {
+                burger.onclick = function() {
+                    nav.classList.toggle('active');
+                    burger.classList.toggle('active');
+                };
+            }
+        });
+    </script>
 </body>
 </html>
